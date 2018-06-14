@@ -29,10 +29,10 @@ def turn(board)
 end
 
 def valid_move?(board, index)
-      if position_taken?(board, index) == false && (index >= 0 && index <= 8)
-            true
-      else
-            false
+      if index.between?(0,8)
+            if !position_taken?(board, index)
+                  true
+            end
       end
 end
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
